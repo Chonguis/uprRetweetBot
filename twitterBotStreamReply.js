@@ -27,7 +27,7 @@ function retweet() {
       // grab ID of tweet to retweet
       var retweetId = data.statuses[0].id_str;
       // Tell TWITTER to retweet
-      Twitter.post('statuses/retweet/:id', {
+      T.post('statuses/retweet/:id', {
               id: retweetId
       }, function(err, response) {
         if (response) {
@@ -46,4 +46,5 @@ function retweet() {
   });
 }
 
+retweet()
 setInterval(retweet, 30000)
