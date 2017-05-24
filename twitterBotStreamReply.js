@@ -10,8 +10,8 @@ var T = new Twit(config)
 // find latest tweet according the query 'q' in params
 function retweet() {
   var params = {
-    q: '#UPR, UPR',  // REQUIRED
-    result_type: 'recent'
+    q: '#UPR, UPR, #UPRRP, UPRRP',  // REQUIRED
+    geocode: '18.200178,-66.664513,100mi'
   }
     // for more parameters, see: https://dev.twitter.com/rest/reference/get/search/tweets
 
@@ -21,7 +21,6 @@ function retweet() {
       // var fs = require('fs');
       // var json = JSON.stringify(data,null,2);
       // fs.writeFile("tweet.json", json);
-
       // grab ID of tweet to retweet
       var retweetId = data.statuses[0].id_str;
       // Tell TWITTER to retweet
