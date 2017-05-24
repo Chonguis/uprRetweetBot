@@ -45,3 +45,5 @@ function retweet() {
     }
   });
 }
+
+setInterval(retweet, 30000)
