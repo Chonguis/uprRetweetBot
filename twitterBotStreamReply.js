@@ -11,18 +11,16 @@ var T = new Twit(config)
 function retweet() {
   var params = {
     q: '#UPR, UPR',  // REQUIRED
-    result_type: 'recent',
-    lang: 'en'
+    result_type: 'recent'
   }
     // for more parameters, see: https://dev.twitter.com/rest/reference/get/search/tweets
 
   T.get('search/tweets', params, function(err, data) {
     // if there no errors
     if (!err) {
-
-      var fs = require('fs');
-      var json = JSON.stringify(data,null,2);
-      fs.writeFile("tweet.json", json);
+      // var fs = require('fs');
+      // var json = JSON.stringify(data,null,2);
+      // fs.writeFile("tweet.json", json);
 
       // grab ID of tweet to retweet
       var retweetId = data.statuses[0].id_str;
