@@ -10,7 +10,8 @@ var T = new Twit(config)
 // find latest tweet according the query 'q' in params
 function retweet() {
   var params = {
-    q: '#UPR, UPR, #UPRRP, UPRRP',  // REQUIRED
+    q: '#UPR',  // REQUIRED
+    result_type: 'recent',
     geocode: '18.200178,-66.664513,100mi'
   }
     // for more parameters, see: https://dev.twitter.com/rest/reference/get/search/tweets
