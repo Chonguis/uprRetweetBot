@@ -10,7 +10,7 @@ var T = new Twit(config)
 // find latest tweet according the query 'q' in params
 function retweet() {
   var params = {
-    q: '#UPR',  // REQUIRED
+    q: '#upr, upr',  // REQUIRED
     result_type: 'recent',
     geocode: '18.200178,-66.664513,100mi'
   }
@@ -43,4 +43,4 @@ function retweet() {
 }
 
 retweet()
-setInterval(retweet, 30000)
+setInterval(retweet, 60000)
