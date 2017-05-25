@@ -27,12 +27,10 @@ function retweet() {
       T.post('statuses/retweet/:id', {
               id: retweetId
       }, function(err, response) {
-        if (response) {
-          console.log('Retweeted!!!');
-        }
-        // if there was an error while tweeting
         if (err) {
           console.log('Something went wrong while RETWEETING... Duplication maybe...');
+        } else {
+          console.log('Retweeted!!!');
         }
       });
     }
